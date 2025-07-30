@@ -24,10 +24,14 @@ body.dark {
   color: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Navbar */
 .navbar {
   background-color: #137f13;
-  padding: 12px 20px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,18 +55,26 @@ body.dark {
 
 .nav-menu {
   display: flex;
-  gap: 18px;
+  gap: 25px;
 }
 
 .nav-link {
   color: #fff;
-  text-decoration: none;
+  background: transparent;
   font-weight: 600;
+  padding: 6px 12px;
+  font-size: 15px;   
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.15); /* soft white on hover */
+  text-decoration: none;
 }
+
 
 .nav-actions {
   display: flex;
@@ -71,7 +83,7 @@ body.dark {
 }
 
 .login-btn {
-  background-color: #ff4d4d;
+  background-color: #71f66aff;
   color: #fff;
   padding: 8px 18px;
   border-radius: 20px;
@@ -123,9 +135,10 @@ body.dark {
 }
 
 .home-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: flex;
+  padding: 0 16px; 
   justify-content: space-between;
   align-items: center;
   gap: 50px;
@@ -226,14 +239,15 @@ body.dark {
 }
 
 .about-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    padding: 0 16px; 
 }
 
 .about-content {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px; /* reduced from 50px */
 }
 
 @media (min-width: 992px) {
@@ -241,6 +255,7 @@ body.dark {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        gap: 24px; /* reduced horizontal space */
     }
 }
 
@@ -250,31 +265,47 @@ body.dark {
     max-width: 600px;
 }
 
+/* Main large image */
 .main-about-img {
     width: 100%;
     height: auto;
-    max-height: 600px; /* fixed the typo */
+    max-height: 600px;
     border-radius: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
 }
 
+/* Small overlapping card image */
 .card-img-container {
     position: absolute;
-    bottom: 20px;
-    right: -30%;
+    bottom: -40px;
+    right: -40px;
     width: 200px;
+    z-index: 2;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.card-img-container img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Responsive tweaks */
 @media (min-width: 768px) {
     .card-img-container {
-        right: -7%;
-        width: 300px;
+        width: 250px;
+        bottom: -50px;
+        right: -50px;
     }
 }
 
 @media (min-width: 1200px) {
     .card-img-container {
-        right: 5%;
+        width: 280px;
+        bottom: -60px;
+        right: -60px;
     }
 }
 
@@ -490,4 +521,270 @@ body.dark {
 
 .footer-column a:hover {
   color: #137f13;
+}
+
+ /* Auth pages */
+.auth-container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #ffffff;
+  gap: 40px;
+}
+
+.auth-left {
+  flex: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-image {
+  max-width: 70%;
+  height: auto;
+}
+
+.auth-right {
+  flex: 1;
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.auth-right h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2px; /* reduce if needed */
+  margin: 0 auto;
+}
+
+
+.auth-form label {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.auth-form input {
+  padding: 0.75rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  margin-top: 2rem;
+  padding: 0.9rem;
+  background-color: #218838;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-form button:hover {
+  background-color: #186c2c;
+}
+
+.auth-right p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.auth-right p a {
+  color: #218838;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.highlight {
+  color: #218838;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .auth-left,
+  .auth-right {
+    width: 100%;
+  }
+
+  .auth-right {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .auth-right h2 {
+    font-size: 1.5rem;
+  }
+
+  .auth-form input {
+    font-size: 0.95rem;
+  }
+
+  .auth-form button {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+  }
+}
+
+/* FAQ SECTION */
+.faq-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.faq-image img {
+  max-width: 550px;
+  width: 100%;
+  height: 500px;
+}
+
+.faq-content {
+  max-width: 600px;
+  flex: 1;
+}
+
+.faq-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* REVIEW SECTION */
+.review-section {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.review-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.review-subtext {
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.review-card.highlighted {
+  background-color: #186c2c;
+  color: white;
+}
+
+.review-card.highlighted .stars {
+  color: #ffd700;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.reviewer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.stars {
+  color: #f5a623;
+  font-size: 1rem;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.slider-indicator {
+  margin-top: 2rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+
+.dot.active {
+  background-color: #186c2c;
 }

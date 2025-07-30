@@ -5,10 +5,9 @@ import { RiLinkedinFill } from 'react-icons/ri';
 import { AiFillYoutube, AiFillGithub, AiOutlineInstagram } from 'react-icons/ai';
 
 const socialLinks = [
-  { path: "", icon: <AiFillYoutube /> },
-  { path: "", icon: <AiFillGithub /> },
+  { path: "https://github.com/Pujan-sarkar/FARMLOC", icon: <AiFillGithub /> },
   { path: "", icon: <AiOutlineInstagram /> },
-  { path: "", icon: <RiLinkedinFill /> },
+  { path: "https://www.linkedin.com/in/pujan-sarkar/", icon: <RiLinkedinFill /> },
 ];
 
 const quickLinks01 = [
