@@ -1,44 +1,70 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BiMenu, BiMoon, BiSun } from "react-icons/bi";
+import { FaLeaf } from "react-icons/fa";
 
 const navLinks = [
-  { path: "/home", display: "Home" },
-  { path: "/about", display: "About Us" },
-  { path: "/cold-storage", display: "Cold Storage" },
-  { path: "/market", display: "Marketplace" },
-  { path: "/blog", display: "Blogs" },
-  { path: "/contact", display: "Contact Us" },
+  { path: "/", section: "home", display: "Home" },
+  { path: "/", section: "about", display: "About Us" },
+  { path: "/", section: "cold-storage", display: "Cold Storage" },
+  { path: "/", section: "market", display: "Marketplace" },
+  { path: "/", section: "review", display: "Reviews" },
+  { path: "/", section: "contact", display: "Contact Us" },
 ];
 
 const Navbar = () => {
   const menuRef = useRef(null);
+  const navigate = useNavigate();
   const [theme, setTheme] = useState("light");
 
+  // Apply theme class to body when theme changes
   useEffect(() => {
-    document.body.classList.remove("dark");
-  }, []);
+    if (theme === "dark") {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.body.classList.toggle("dark", newTheme === "dark");
+    setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"));
   };
 
   const toggleMenu = () => {
     menuRef.current.classList.toggle("show-menu");
   };
 
+  const handleNavClick = (path, section) => {
+    toggleMenu();
+    if (window.location.pathname !== path) {
+      navigate(path);
+    }
+
+    setTimeout(() => {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <header className="navbar">
       <div className="navbar-container">
-        <h1 className="logo">FARMLOC</h1>
+        <div className="logo">
+          <FaLeaf className="leaf-icon" style={{ marginRight: "8px", color: "#4CAF50" }} />
+          <span>FARMLOC</span>
+        </div>
 
         <nav ref={menuRef} className="nav-menu">
           {navLinks.map((link, index) => (
-            <NavLink key={index} to={link.path} className="nav-link">
+            <button
+              key={index}
+              onClick={() => handleNavClick(link.path, link.section)}
+              className="nav-link"
+            >
               {link.display}
-            </NavLink>
+            </button>
           ))}
         </nav>
 
