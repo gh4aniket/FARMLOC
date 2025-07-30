@@ -1,3 +1,4 @@
+/// src/pages/About.jsx
 import React from 'react';
 import aboutImg from '../assets/images/about1.png';
 import aboutCardImg from "../assets/images/about2..png";
@@ -6,7 +7,7 @@ import '../index.css';
 
 const About = () => {
     return (
-        <section className="about-section">
+        <section id="about" className="about-section">
             <div className="about-container">
                 <div className="about-content">
 

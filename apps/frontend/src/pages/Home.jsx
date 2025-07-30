@@ -1,3 +1,5 @@
+
+// src/pages/Home.jsx
 import React from "react";
 import mainImage from "../assets/images/home1.png";
 import sideImage1 from "../assets/images/home2.png";
@@ -5,7 +7,7 @@ import sideImage2 from "../assets/images/home3.png";
 
 const Home = () => {
   return (
-    <section className="home-section">
+    <section id="home" className="home-section">
       <div className="home-container">
         <div className="hero-text">
           <h1>Connecting Cold Storages.<br /> Empowering Farmers. 🌾 🧊</h1>
