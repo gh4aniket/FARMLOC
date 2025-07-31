@@ -7,20 +7,20 @@ It is a web-based platform designed to empower farmers by providing seamless acc
 
 ## 🔧 Tech Stack
 
-- **Frontend:**
-  - React.js
-  - Tailwind CSS
-  - Bootstrap
+### **Frontend:**
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-- **Backend:**
-  - Node.js
-  - Express.js
+### **Backend:**
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
-- **Database:**
-  - MongoDB
+### **Database:**
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
-- **Authentication & Hosting:**
-  - Firebase
+### **Authentication & Hosting:**
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
 ---
 
@@ -122,6 +122,12 @@ When contributing to this project:
 ## 📧 Support
 
 For any questions or issues, please create an issue in the repository or contact the development team.
+
+### Maintainer
+
+- [Pujan Sarkar](https://github.com/Pujan-sarkar) [![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/Pujan-sarkar)
+
+---
 
 ---
 
