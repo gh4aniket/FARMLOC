@@ -20,17 +20,23 @@ body {
 }
 
 body.dark {
-  background-color: #2E3A59;
-  color: #fff;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Navbar */
+/* --- Glassmorphism Navbar --- */
 .navbar {
-  background-color: #137f13;
+  background: rgba(255, 255, 255, 0.379);
+  color: black;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 0 8px 2px #71f66a33;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1.5px solid rgba(113, 246, 106, 0.25);
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
@@ -38,6 +44,7 @@ html {
   position: sticky;
   top: 0;
   z-index: 999;
+  transition: background 0.3s, box-shadow 0.3s;
 }
 
 .navbar-container {
@@ -50,32 +57,58 @@ html {
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #fff;
+  color: #000000;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  padding: 4px 14px;
+  letter-spacing: 1px;
 }
 
-.nav-menu {
-  display: flex;
-  gap: 25px;
-}
-
+/* --- Glassy nav links with underline hover --- */
 .nav-link {
-  color: #fff;
-  background: transparent;
+  color: #000000;
+  background: rgba(255,255,255,0.08);
   font-weight: 600;
   padding: 6px 12px;
-  font-size: 15px;   
+  margin: 0 10px;
+  font-size: 15px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2.5px;
+  background: linear-gradient(90deg, #71f66a 0%, #137f13 100%);
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.35s cubic-bezier(.4,0,.2,1);
 }
 
 .nav-link:hover {
-  background: rgba(255, 255, 255, 0.15); /* soft white on hover */
-  text-decoration: none;
+  background: rgba(113, 246, 106, 0.18);
+  color: #71f66a;
 }
-
-
+.nav-link:hover::after {
+  width: calc(100% - 24px);
+}
+.nav-link.active {
+  background: rgba(113, 246, 106, 0.25);
+  color: #71f66a;
+}
+.nav-link.active::after {
+  width: calc(100% - 24px);
+}
 .nav-actions {
   display: flex;
   align-items: center;
@@ -84,7 +117,7 @@ html {
 
 .login-btn {
   background-color: #71f66aff;
-  color: #fff;
+  color: #000000;
   padding: 8px 18px;
   border-radius: 20px;
   text-decoration: none;
@@ -92,11 +125,15 @@ html {
   border: none;
   font-size: 14px;
 }
+.login-btn:hover {
+  background-color: #137f13;
+  color: #ffffff;
+}
 
 .theme-btn {
   background: transparent;
   border: none;
-  color: #fff;
+  color: #000000;
   font-size: 20px;
   cursor: pointer;
 }
@@ -125,6 +162,15 @@ html {
 
   .menu-icon {
     display: block;
+  }
+
+  .navbar {
+    border-radius: 0 0 18px 18px;
+    padding: 16px 10px;
+  }
+  .nav-menu {
+    background: rgba(19,127,19,0.85);
+    backdrop-filter: blur(8px);
   }
 }
 
@@ -716,7 +762,7 @@ html {
 }
 
 .review-subtext {
-  color: #666;
+  color: #000000;
   margin-bottom: 3rem;
   max-width: 800px;
   margin-left: auto;
@@ -738,11 +784,12 @@ html {
   text-align: left;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
+  color: #000000;
 }
 
 .review-card.highlighted {
   background-color: #186c2c;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .review-card.highlighted .stars {
@@ -787,4 +834,139 @@ html {
 
 .dot.active {
   background-color: #186c2c;
+}
+body.dark {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark .navbar {
+  background: rgba(30, 50, 30, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.28), 0 0 8px 2px #71f66a33;
+  border: 1.5px solid rgba(113, 246, 106, 0.25);
+}
+
+body.dark .nav-link {
+  color: #71f66a;
+  background: rgba(30, 50, 30, 0.18);
+}
+
+body.dark .nav-link:hover {
+  background: rgba(113,246,106,0.18);
+  color: #71f66a;
+}
+
+body.dark .nav-link::after {
+  background: linear-gradient(90deg, #71f66a 0%, #137f13 100%);
+}
+
+/* Dark theme for home-container */
+body.dark .home-section {
+  background: rgba(30, 50, 30, 0.18);
+}
+
+body.dark .home-container {
+  color: #e0e0e0;
+}
+
+body.dark .hero-text h1,
+body.dark .stats h2 {
+  color: #71f66a;
+}
+
+body.dark .hero-text p,
+body.dark .stats p {
+  color: #cfd8dc;
+}
+
+body.dark .explore-btn {
+  background: #71f66a;
+  color: #232b3e;
+}
+
+/* Dark theme for about-section and about-container */
+body.dark .about-section {
+  background: rgba(30, 50, 30, 0.18);
+}
+
+body.dark .about-container {
+  color: #e0e0e0;
+}
+
+body.dark .about-text h2 {
+  color: #71f66a;
+}
+
+body.dark .about-text p {
+  color: #cfd8dc;
+}
+
+body.dark .about-btn {
+  background: #71f66a;
+  color: #232b3e;
+}
+
+body.dark .main-about-img,
+body.dark .about-card-img {
+  border: 2px solid #71f66a;
+}
+
+/* Dark theme for services-section and service-card */
+body.dark .services-section {
+  background: rgba(30, 50, 30, 0.18);
+}
+
+body.dark .services-heading {
+  color: #71f66a;
+}
+
+body.dark .service-card {
+  background-color: #26304a;
+  color: #e0e0e0;
+  border-color: #3a4663;
+}
+
+body.dark .service-title {
+  color: #71f66a;
+}
+
+body.dark .service-desc {
+  color: #cfd8dc;
+}
+
+body.dark .service-card::before {
+  background: linear-gradient(90deg, #71f66a, #137f13);
+}
+
+/* Logo color for dark mode */
+body.dark .logo {
+  color: #fff;
+}
+
+body.dark .theme-btn {
+  color: #fff;
+}
+
+body.dark .faq-container {
+  background: rgba(30, 50, 30, 0.18);
+}
+
+body.dark .faq-item {
+  background-color: #26304a;
+  color: #e0e0e0;
+  border-color: #3a4663;
+}
+
+body.dark .faq-question {
+  color: #71f66a;
+}
+
+body.dark .faq-answer {
+  color: #e7e7e7;
+}
+body.dark .review-subtext {
+  color: #e8e8e8;
+}
+body.dark .review-heading {
+  color: #71f66a;
 }
