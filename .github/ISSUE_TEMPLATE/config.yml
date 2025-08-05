@@ -1,0 +1,21 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Join the FARMLOC Discussion
+    url: https://github.com/Pujan-sarkar/farmloc/discussions
+    about: Please use GitHub Discussions to ask questions or start conversations.
+issue_templates:
+  - name: 🐛 Bug Report
+    description: Report something that isn't working correctly in FARMLOC.
+    file: ISSUE_TEMPLATE/bug_report.md
+  - name: 📚 Documentation Issue
+    description: Suggest documentation fixes, additions, or improvements.
+    file: ISSUE_TEMPLATE/documentation.md
+  - name: 🛠️ Enhancement Proposal
+    description: Propose improvements to existing features.
+    file: ISSUE_TEMPLATE/enhancement.md
+  - name: 🎨 Frontend Feature Request
+    description: Suggest a new feature or UI/UX improvement for the frontend.
+    file: ISSUE_TEMPLATE/frontend_feature.md
+  - name: 🧠 Backend Feature Request
+    description: Suggest a new feature or improvement for the backend.
+    file: ISSUE_TEMPLATE/backend_feature.md
