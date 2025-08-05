@@ -107,16 +107,33 @@ When contributing to this project:
 4. Navigate to the frontend URL (typically `http://localhost:3000`)  
 5. Begin exploring FARMLOC features!
 
+## 🙌 Our Contributors
+
+We thank all the amazing contributors who help make **FARMLOC** better every day! 🌾💚
+
+<a href="https://github.com/Pujan-sarkar/FARMLOC/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Pujan-sarkar/FARMLOC" />
+</a>
+
+---
+
+🎉 **This project is listed in [GirlScript Summer of Code 2025](https://gssoc.girlscript.tech/)!**  
+We welcome all contributors participating via GSSoC’25. Come, collaborate, and grow with us!
+
+<a href="https://gssoc.girlscript.tech/" target="_blank">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU05c_WfyHcLb3TyVuay02_ShXfYqyuBxU8A&s" alt="GSSoC'25 Logo" width="200"/>
+</a>
+
+
 ## 📧 Support
 
 For any questions or issues, please create an issue in the repository or contact the development team.
 
 ## Maintainer
 
-| Name            | Connect with him                                                                    |
-|-----------------|-------------------------------------------------------------------------------------|
-| Pujan Sarkar    | <a href="https://github.com/Pujan-sarkar"><img src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="GitHub" /></a> <a href="https://www.linkedin.com/in/pujan-sarkar"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" /></a> |
-
+<table style="width:100%; border: 0;"> <tr> <td align="center" style="border: 0;"> <img src="https://avatars.githubusercontent.com/u/144250917?v=4" width="120" height="120" style="border-radius: 50%;" alt="Pujan Sarkar"/><br/> <strong>Pujan Sarkar</strong><br/><br/> <a href="https://github.com/Pujan-sarkar"> <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000" alt="GitHub" /> </a> <a href="https://www.linkedin.com/in/pujan-sarkar"> <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /> </a> </td> </tr> </table>
 </div>
+
+
 
 **Happy Farming! 🌱**
