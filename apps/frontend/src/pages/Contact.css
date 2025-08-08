@@ -1,0 +1,46 @@
+/* Custom Farmer-Themed Styling */
+.contact-us {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.contact-us h2 {
+  color: #2e7d32; /* Green shade */
+  font-weight: 700;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.contact-item .icon {
+  color: #4caf50;
+  font-size: 1.5rem;
+  margin-top: 4px;
+}
+
+.contact-item h5 {
+  color: #388e3c;
+  font-weight: 600;
+}
+
+/* Form Styling */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #a5d6a7;
+}
+
+.btn-success {
+  background-color: #4caf50;
+  border: none;
+  padding: 10px;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-info {
+    margin-top: 30px;
+  }
+}

@@ -9,6 +9,10 @@ import Faq from "./pages/faq";
 import Review from "./pages/Review";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
+import Contact from "./pages/Contact ";
+import ColdStorage from "./pages/ColdStorage";
+import Marketplace from "./pages/Marketplace";
+
 
 const sectionMap = {
   "/": "home",
@@ -36,9 +40,12 @@ const FullLandingPage = () => {
     <>
       <Home />
       <About />
+      <ColdStorage />
+      <Marketplace />
       <Services />
       <Faq />
       <Review />
+      <Contact />
       {/* Add other components similarly */}
     </>
   );
