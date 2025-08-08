@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 //import logo from '../../assets/images/logo.png';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { AiFillYoutube, AiFillGithub, AiOutlineInstagram } from 'react-icons/ai';
+import { FaLeaf } from 'react-icons/fa';
 
 const socialLinks = [
   { path: "https://github.com/Pujan-sarkar/FARMLOC", icon: <AiFillGithub /> },
@@ -34,13 +35,14 @@ const Footer = () => {
 
   return (
     <footer className="footer">
+      <FaLeaf className='footer-leaf'/>
       <div className="footer-container">
         <div className="footer-column">
           <div className="footer-logo">
             <h1>FARMLOC</h1>
           </div>
-          <p className="footer-description">
-            © {year} FARMLOC — Empowering Farmers & Local Markets 🌾
+          <p className='footer-description'>
+            FARMLOC connects rural farmers with cold storage, bringing you fresh groceries while supporting local agriculture.
           </p>
           <div className="footer-socials">
             {socialLinks.map((link, index) => (
@@ -84,6 +86,12 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+        <div className="footer-divide">
+          <hr />
+          <p className="footer-divide-description">
+            © {year} FARMLOC — Empowering Farmers & Local Markets 🌾
+          </p>
+        </div>
     </footer>
   );
 };
