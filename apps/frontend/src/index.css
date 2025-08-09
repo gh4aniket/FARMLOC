@@ -279,6 +279,88 @@ html {
   }
 }
 
+/* Announcement Bar CSS */
+
+/* --- Glassmorphic Announcement Bar --- */
+.announcement-bar {
+  width: 97.3%;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15), 0 0 6px 2px #71f66a33;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1.5px solid rgba(113, 246, 106, 0.3);
+  padding: 10px 20px;
+  position: sticky;
+  top: 72px; /* adjust if your navbar height is different */
+  z-index: 998;
+   overflow-x: hidden;
+  overflow-y: visible; /* keep vertical if needed */
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 45s linear infinite;
+  font-size: 17px;
+  font-weight: 500;
+  color: #137f13;
+  letter-spacing: 0.5px;
+}
+
+body.dark .marquee-content {
+  color: #00ff00; /* lighter green for dark background */
+}
+.announcement-msg {
+  display: inline-block;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 600px) {
+  .announcement-bar {
+    width: 100%;
+    padding: 8px 10px;
+    top: 56px; /* if navbar height smaller on mobile */
+  }
+  .marquee-content {
+    font-size: 13px;
+    animation-duration: 60s; /* slow down on smaller screens */
+  }
+}
+@media (max-width: 900px) {
+  .announcement-bar {
+    width: 96%;
+    padding: 9px 15px;
+    top: 64px;
+  }
+  .marquee-content {
+    font-size: 15px;
+    animation-duration: 50s;
+  }
+}
+
+@media (min-width: 1200px) {
+  .announcement-bar {
+    width: 97.3%;
+  }
+  .marquee-content {
+    font-size: 18px;
+    animation-duration: 45s;
+  }
+}
+
 .about-section {
     padding: 60px 20px;
     background: #fff;

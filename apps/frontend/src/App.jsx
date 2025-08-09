@@ -9,6 +9,7 @@ import Faq from "./pages/faq";
 import Review from "./pages/Review";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
+import AnnouncementBar from "./components/AnnouncmentBar";
 
 const sectionMap = {
   "/": "home",
@@ -52,6 +53,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       {!shouldHideLayout && <Navbar />}
+      {!shouldHideLayout && <AnnouncementBar />}
       {children}
       {!shouldHideLayout && <Footer />}
     </>
