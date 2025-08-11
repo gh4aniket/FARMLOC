@@ -1,0 +1,257 @@
+/* Marketplace Styles - Matching FARMLOC Design */
+.marketplace-section {
+  padding: 3rem 2rem;
+  background-color: #f9fbf8;
+}
+
+.marketplace-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.marketplace-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.marketplace-header h1 {
+  font-size: 2.5rem;
+  color: #2a5d3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.marketplace-header p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Search and Filters */
+.marketplace-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #d1e7dd;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #71f66a;
+  box-shadow: 0 0 0 3px rgba(113, 246, 106, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #71f66a;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.category-filters button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #d1e7dd;
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-filters button.active {
+  background: #71f66a;
+  color: white;
+  border-color: #71f66a;
+}
+
+.category-filters button:hover {
+  background: #e8f5e9;
+}
+
+.cart-button {
+  background: #4caf50;
+  color: white;
+  margin-left: auto;
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(113, 246, 106, 0.15);
+}
+
+.product-image {
+  position: relative;
+  height: 200px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.9);
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  color: #ff9800;
+}
+
+.product-details {
+  padding: 1.5rem;
+}
+
+.product-details h3 {
+  margin: 0 0 5px 0;
+  color: #2a5d3e;
+}
+
+.farmer {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.price {
+  font-weight: 600;
+  color: #4caf50;
+  font-size: 1.1rem;
+}
+
+.storage {
+  font-size: 0.8rem;
+  color: #666;
+  background: #f5f5f5;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.harvest-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 10px 0;
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 10px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+  background: #3d8b40;
+}
+
+/* Cold Storage Banner */
+.storage-banner {
+  background: rgba(113, 246, 106, 0.1);
+  border: 1px solid rgba(113, 246, 106, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.storage-banner h3 {
+  color: #2a5d3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.storage-banner p {
+  max-width: 600px;
+  margin: 10px auto 20px;
+  color: #555;
+}
+
+.storage-cta {
+  background: #4caf50;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.storage-cta:hover {
+  background: #3d8b40;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marketplace-header h1 {
+    font-size: 2rem;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

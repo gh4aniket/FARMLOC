@@ -15,7 +15,6 @@ body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #fff;
-  color: #213547;
   transition: background 0.3s, color 0.3s;
 }
 
@@ -28,32 +27,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* --- Glassmorphism Navbar --- */
-.navbar {
-  background: rgba(255, 255, 255, 0.379);
-  color: black;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 0 8px 2px #71f66a33;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 18px;
-  border: 1.5px solid rgba(113, 246, 106, 0.25);
-  padding: 20px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -64,24 +37,29 @@ html {
   letter-spacing: 1px;
 }
 
-/* --- Glassy nav links with underline hover --- */
-.nav-link {
-  color: #000000;
-  background: rgba(255,255,255,0.08);
-  font-weight: 600;
-  padding: 6px 12px;
-  margin: 0 10px;
-  font-size: 15px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  transition: background 0.3s, color 0.3s;
-  text-decoration: none;
-  overflow: hidden;
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.379) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 0 8px 2px #71f66a33 !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 18px !important;
+  border: 1.5px solid rgba(113, 246, 106, 0.25) !important;
+  padding: 10px 30px !important;
+  margin: 20px auto !important;
+  max-width: 95vw !important;
+  transition: background 0.3s, box-shadow 0.3s !important;
 }
 
-.nav-link::after {
+.nav-link-custom {
+  position: relative;
+  text-decoration: none !important;
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 8px !important;
+  transition: background 0.3s, color 0.3s !important;
+  padding: 6px 12px !important;
+}
+
+.nav-link-custom::after {
   content: '';
   display: block;
   position: absolute;
@@ -95,82 +73,45 @@ html {
   transition: width 0.35s cubic-bezier(.4,0,.2,1);
 }
 
-.nav-link:hover {
-  background: rgba(113, 246, 106, 0.18);
-  color: #71f66a;
+.nav-link-custom:hover,
+.nav-link-custom:focus {
+  background: rgba(113, 246, 106, 0.18) !important;
+  color: #71f66a !important;
 }
-.nav-link:hover::after {
+
+.nav-link-custom:hover::after,
+.nav-link-custom:focus::after {
   width: calc(100% - 24px);
 }
-.nav-link.active {
-  background: rgba(113, 246, 106, 0.25);
-  color: #71f66a;
-}
-.nav-link.active::after {
-  width: calc(100% - 24px);
-}
-.nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 35px;
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(113, 246, 106, 0.5) !important;
 }
 
-.login-btn {
-  background-color: #71f66aff;
-  color: #000000;
-  padding: 8px 18px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 600;
-  border: none;
-  font-size: 14px;
-}
-.login-btn:hover {
-  background-color: #137f13;
-  color: #ffffff;
-}
-
-.theme-btn {
-  background: transparent;
-  border: none;
-  color: #000000;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 24px;
-  color: #fff;
-}
-
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #137f13;
-    position: absolute;
-    top: 50px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 10px;
+@media (max-width: 992px) {
+  .custom-navbar {
+    border-radius: 0 0 18px 18px !important;
+    margin: 0 !important;
+    max-width: 100vw !important;
   }
-
-  .show-menu {
-    display: flex;
+  
+  .navbar-collapse {
+    background: rgba(19,127,19,0.85) !important;
+    backdrop-filter: blur(8px) !important;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 10px !important;
   }
-
-  .menu-icon {
-    display: block;
+  
+  .nav-link-custom {
+    color: white !important;
+    margin: 5px 0 !important;
+    text-align: center;
   }
-
-  .navbar {
-    border-radius: 0 0 18px 18px;
-    padding: 16px 10px;
-  }
-  .nav-menu {
-    background: rgba(19,127,19,0.85);
-    backdrop-filter: blur(8px);
+  
+  .nav-link-custom:hover,
+  .nav-link-custom:focus {
+    color: #71f66a !important;
   }
 }
 
