@@ -1,6 +1,7 @@
-/* Custom Farmer-Themed Styling */
 .contact-us {
   font-family: 'Segoe UI', Tahoma, sans-serif;
+  padding: 2rem 0;
+  background-color: #f8f9fa;
 }
 
 .contact-us h2 {
@@ -8,64 +9,64 @@
   font-weight: 700;
 }
 
-/* Contact.css */
-.contact-page-container {
-  display: flex;
-  min-height: 70vh;
-  font-family: 'Arial', sans-serif;
+.contact-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-.contact-image-column,
+.contact-row {
+  min-height: 700px;
+  align-items: stretch;
+  margin: 0;
+}
+
+.svg-column,
 .contact-form-column {
-  flex: 1;
   display: flex;
+  align-items: center;
+  padding: 2rem;
 }
 
-.contact-image-column {
-  background-color: #f5f5f5;
-}
-
-.contact-photo {
+.svg-container {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact-form-column {
-  background: white;
-  padding: 0;
+.contact-svg {
+  width: 100%;
+  max-width: 500px;
+  height: 400px;
+  border-radius: 8px;
 }
 
 .form-content {
-  padding-left: 10px;
   width: 100%;
-  max-width: 600px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #333;
-  font-weight: 600;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+  width: 100%;
 }
 
 .form-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  margin-bottom: 1.5rem;
 }
 
-label {
+.form-section label {
+  display: block;
   font-weight: 600;
   color: #333;
-  font-size: 15px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .required {
@@ -73,76 +74,83 @@ label {
 }
 
 .name-fields {
-  display: flex;
-  gap: 15px;
-}
-
-.name-fields .form-input {
-  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 .form-input {
-  padding: 12px 15px;
-  border: 1px solid #ddd;
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
   border-radius: 4px;
-  font-size: 15px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #999;
+  border-color: #2e7d32;
 }
 
-.full-width {
-  width: 100%;
+.form-input.full-width {
+  grid-column: 1 / -1;
 }
 
 .textarea {
   resize: vertical;
-  min-height: 120px;
+  min-height: 100px;
 }
 
 .divider {
   height: 1px;
-  background-color: #eee;
-  margin: 10px 0;
+  background: linear-gradient(to right, transparent, #e0e0e0, transparent);
+  margin: 1.5rem 0;
 }
 
 .submit-button {
-  background-color: #333;
+  background: #2e7d32;
   color: white;
   border: none;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
+  padding: 0.875rem 2rem;
   border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   width: 100%;
+  text-transform: uppercase;
 }
 
 .submit-button:hover {
-  background-color: #555;
+  background: #1b5e20;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .contact-page-container {
-    flex-direction: column;
+  .contact-container {
+    margin: 0 1rem;
+    border-radius: 8px;
   }
   
-  .contact-image-column {
-    height: 300px; /* Fixed height on mobile */
+  .contact-row {
+    min-height: auto;
   }
   
-  .form-content {
-    padding: 30px;
+  .svg-column,
+  .contact-form-column {
+    padding: 1.5rem;
+    margin-bottom: 0;
+  }
+  
+  .contact-svg {
+    max-width: 380px;
+    height: 300px;
   }
   
   .name-fields {
-    flex-direction: column;
-    gap: 15px;
+    grid-template-columns: 1fr;
   }
 }
