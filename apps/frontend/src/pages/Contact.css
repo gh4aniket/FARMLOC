@@ -8,39 +8,141 @@
   font-weight: 700;
 }
 
-.contact-item {
+/* Contact.css */
+.contact-page-container {
   display: flex;
-  align-items: flex-start;
+  min-height: 70vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.contact-image-column,
+.contact-form-column {
+  flex: 1;
+  display: flex;
+}
+
+.contact-image-column {
+  background-color: #f5f5f5;
+}
+
+.contact-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-form-column {
+  background: white;
+  padding: 0;
+}
+
+.form-content {
+  padding-left: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.name-fields {
+  display: flex;
   gap: 15px;
 }
 
-.contact-item .icon {
-  color: #4caf50;
-  font-size: 1.5rem;
-  margin-top: 4px;
+.name-fields .form-input {
+  flex: 1;
 }
 
-.contact-item h5 {
-  color: #388e3c;
-  font-weight: 600;
+.form-input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 15px;
 }
 
-/* Form Styling */
-.form-control {
-  border-radius: 8px;
-  border: 1px solid #a5d6a7;
+.form-input:focus {
+  outline: none;
+  border-color: #999;
 }
 
-.btn-success {
-  background-color: #4caf50;
+.full-width {
+  width: 100%;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #eee;
+  margin: 10px 0;
+}
+
+.submit-button {
+  background-color: #333;
+  color: white;
   border: none;
-  padding: 10px;
+  padding: 14px;
+  font-size: 16px;
   font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s;
+  width: 100%;
 }
 
-/* Responsive Adjustments */
+.submit-button:hover {
+  background-color: #555;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .contact-info {
-    margin-top: 30px;
+  .contact-page-container {
+    flex-direction: column;
+  }
+  
+  .contact-image-column {
+    height: 300px; /* Fixed height on mobile */
+  }
+  
+  .form-content {
+    padding: 30px;
+  }
+  
+  .name-fields {
+    flex-direction: column;
+    gap: 15px;
   }
 }
