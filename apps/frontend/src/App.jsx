@@ -9,14 +9,10 @@ import Faq from "./pages/faq";
 import Review from "./pages/Review";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
-<<<<<<< HEAD
 import AnnouncementBar from "./components/AnnouncmentBar";
-=======
 import Contact from "./pages/Contact ";
 import ColdStorage from "./pages/ColdStorage";
 import Marketplace from "./pages/Marketplace";
-
->>>>>>> 083dcc89482145d786c0d11b6688b0b30d707d8e
 
 const sectionMap = {
   "/": "home",
