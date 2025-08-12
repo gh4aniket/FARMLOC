@@ -134,6 +134,6 @@ For any questions or issues, please create an issue in the repository or contact
 <table style="width:100%; border: 0;"> <tr> <td align="center" style="border: 0;"> <img src="https://avatars.githubusercontent.com/u/144250917?v=4" width="120" height="120" style="border-radius: 50%;" alt="Pujan Sarkar"/><br/> <strong>Pujan Sarkar</strong><br/><br/> <a href="https://github.com/Pujan-sarkar"> <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000" alt="GitHub" /> </a> <a href="https://www.linkedin.com/in/pujan-sarkar"> <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /> </a> </td> </tr> </table>
 </div>
 
-
-
-**Happy Farming! 🌱**
+⭐ **Don’t forget to star our repo if you like this project!** 🌱💚  
+Your support helps us grow and reach more farmers. 
+**Happy Coding! 🌱**
