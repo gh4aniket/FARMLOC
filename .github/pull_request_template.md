@@ -25,6 +25,9 @@ Select the type of change made in this pull request:
 - [ ] I have updated the documentation or added relevant comments in the code (if applicable).
 - [ ] I have added related screenshots or UI proof (if applicable).
 - [ ] I have linked the related issue in this PR.
+- [ ] I have sent the Pull Request to the **dev** branch.
+- [ ] I have checked there are **no merge conflicts** in my PR.
+- [ ] I have ⭐ starred the FARMLOC repository.
 
 ## 🖼️ Screenshots (if UI related)
 
