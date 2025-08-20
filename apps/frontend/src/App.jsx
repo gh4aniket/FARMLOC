@@ -9,6 +9,7 @@ import Faq from "./pages/faq";
 import Review from "./pages/Review";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
+import Contact from "./pages/contact";
 
 const sectionMap = {
   "/": "home",
@@ -39,6 +40,7 @@ const FullLandingPage = () => {
       <Services />
       <Faq />
       <Review />
+      <Contact />
       {/* Add other components similarly */}
     </>
   );
