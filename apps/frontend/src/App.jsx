@@ -10,6 +10,9 @@ import Review from "./pages/Review";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
 import Contact from "./pages/contact";
+import AnnouncementBar from "./components/AnnouncmentBar";
+import ColdStorage from "./pages/ColdStorage";
+import Marketplace from "./pages/Marketplace";
 
 const sectionMap = {
   "/": "home",
@@ -37,6 +40,8 @@ const FullLandingPage = () => {
     <>
       <Home />
       <About />
+      <ColdStorage />
+      <Marketplace />
       <Services />
       <Faq />
       <Review />
@@ -54,6 +59,7 @@ const LayoutWrapper = ({ children }) => {
   return (
     <>
       {!shouldHideLayout && <Navbar />}
+      {!shouldHideLayout && <AnnouncementBar />}
       {children}
       {!shouldHideLayout && <Footer />}
     </>
