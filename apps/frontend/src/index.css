@@ -964,7 +964,7 @@ body.dark .marquee-content {
 }
 
 .contact-image img {
-  max-width: 320px;
+  max-width: 420px;
   width: 120%;
 }
 
@@ -1036,6 +1036,22 @@ body.dark .nav-link:hover {
 
 body.dark .nav-link::after {
   background: linear-gradient(90deg, #71f66a 0%, #137f13 100%);
+}
+
+/* Dark theme for contact section */
+
+body.dark .contact-section{
+  background-color: #1a1a1a;
+}
+
+body.dark .contact-card{
+  background-color: #232b3e;
+  border: solid #3a4663;
+}
+
+
+body.dark .contact-section::before{
+  background-color: #71f66a;
 }
 
 /* Dark theme for home-container */
