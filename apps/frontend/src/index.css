@@ -996,6 +996,7 @@ body.dark .marquee-content {
   border-radius: 20px;
   width: 300px;
   background-color: #f0f0f0;
+  color: #000000;
 }
 
 .contact-form button{
