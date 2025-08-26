@@ -78,8 +78,8 @@
 .category-filters button {
   padding: 8px 16px;
   border-radius: 20px;
-  border: 1px solid #d1e7dd;
-  background: white;
+  border: 1px solid #1c4834;
+  background: rgb(42, 147, 15);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -88,13 +88,13 @@
 }
 
 .category-filters button.active {
-  background: #71f66a;
+  background: #46ed3d;
   color: white;
-  border-color: #71f66a;
+  border-color: #46ed3d;
 }
 
 .category-filters button:hover {
-  background: #e8f5e9;
+  background: rgb(42, 147, 15, 0.8);
 }
 
 .cart-button {
