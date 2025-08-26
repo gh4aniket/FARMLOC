@@ -9,6 +9,7 @@ const ColdStorage = () => {
   const [filters, setFilters] = useState({
     capacity: '',
     distance: '10km',
+    location: '',
     rating: '3+'
   });
 
@@ -43,13 +44,53 @@ const ColdStorage = () => {
       contact: "+91 7654321098",
       rating: 3.8,
       price: "₹220/tonne/day"
+    },
+    {
+      id: 4,
+      name: "Rakesh Cold Chain",
+      location: "Bengaluru, Karnataka",
+      distance: "3km",
+      capacity: "20 tonnes",
+      contact: "+91 7654321098",
+      rating: 3.8,
+      price: "₹225/tonne/day"
+    },
+    {
+      id: 5,
+      name: "Modern Cold Chain",
+      location: "Hyderabad, Telangana",
+      distance: "7km",
+      capacity: "20 tonnes",
+      contact: "+91 6543210567",
+      rating: 3.8,
+      price: "₹211/tonne/day"
+    },
+    {
+      id: 6,
+      name: "FarmToMarket Cold Chain",
+      location: "Hyderabad, Telangana",
+      distance: "8km",
+      capacity: "80 tonnes",
+      contact: "+91 7654321098",
+      rating: 3.8,
+      price: "₹220/tonne/day"
     }
   ];
 
-  const filteredStorages = coldStorages.filter(storage => 
-    storage.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-    (filters.rating === '' || storage.rating >= parseInt(filters.rating))
-  );
+ const filteredStorages = coldStorages.filter(storage => {
+  const searchMatch =
+    storage.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    storage.location.toLowerCase().includes(searchTerm.toLowerCase());
+
+  const ratingMatch =
+    filters.rating === '' || storage.rating >= parseInt(filters.rating);
+
+  const locationMatch =
+    filters.location === '' || storage.location.toLowerCase().includes(filters.location.toLowerCase());
+
+  return searchMatch && ratingMatch && locationMatch;
+});
+
 
   return (
     <Container className="cold-storage-page my-5" id='cold-storage'>
@@ -81,11 +122,11 @@ const ColdStorage = () => {
 
       <Row>
         {/* Map Section */}
-        <Col lg={6} className="mb-4">
+        <Col lg={6} className="mb-4  mt-4 mb-lg-0">
           <div className="map-container">
             <img src={img}
               alt="Cold storage locations" 
-              className="img-fluid rounded"
+              className="img-fluid rounded "
             />
             <div className="map-overlay">
               <Button variant="success" size="sm">
@@ -97,7 +138,7 @@ const ColdStorage = () => {
         </Col>
 
         {/* Results List */}
-        <Col lg={6}>
+        <Col lg={6} className='overflow-auto' style={{ maxHeight: '60vh' }}>
           {filteredStorages.length > 0 ? (
             filteredStorages.map(storage => (
               <Card key={storage.id} className="mb-3 storage-card">
