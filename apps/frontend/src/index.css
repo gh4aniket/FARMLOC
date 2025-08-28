@@ -156,6 +156,14 @@ html {
   cursor: pointer;
   margin-bottom: 30px;
   font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease-in-out;
+}
+.explore-btn:hover{
+  background: #3d8b40;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  
 }
 
 .stats {
