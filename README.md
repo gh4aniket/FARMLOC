@@ -6,23 +6,29 @@ It is a web-based platform designed to empower farmers by providing seamless acc
 ## 🔧 Tech Stack
 
 ### **Frontend:**
+
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ### **Backend:**
+
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
 ### **Database:**
+
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 
 ### **Authentication & Hosting:**
+
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 
+## ✨ Features
 
-- 📍 Locate nearby cold storages
-- 📊 Manage farm resources and inventory
-- 🔐 Secure authentication with Firebase
-- 🌐 Responsive and modern UI using Tailwind CSS + Bootstrap
-- 🧠 Smart integration with backend for real-time updates
+- 📍 **Cold Storage Locator** – Find and connect with the nearest available cold storages in real-time
+- 📊 **Farm Resource Management** – Track and manage seeds, fertilizers, and equipment easily
+- 🔐 **Secure Authentication** – User login and registration powered by Firebase
+- 📡 **Real-Time Updates** – Seamless communication between frontend and backend
+- 🌐 **Responsive UI** – Mobile-first design with Tailwind CSS & Bootstrap
+- 🤝 **Collaboration Ready** – Built for open-source contributions and hackathon scaling
 
 ## 📁 Project Structure (Basic Idea)
 
@@ -44,24 +50,25 @@ It is a web-based platform designed to empower farmers by providing seamless acc
 
 ## 🛠️ Installation & Setup
 
-1. **Clone the repository:**
-    
-        git clone https://github.com/your-username/FARMLOC.git
-        cd FARMLOC
+1.  **Clone the repository:**
 
-   **Note:** This repository has two branches:
-   - `main` - Production/stable branch
-   - `dev` - Development branch
+         git clone https://github.com/your-username/FARMLOC.git
+         cd FARMLOC
 
-2. **Frontend Setup:**
-    
+    **Note:** This repository has two branches:
+
+    - `main` - Production/stable branch
+    - `dev` - Development branch
+
+2.  **Frontend Setup:**
+
         cd apps
         cd frontend
         pnpm i
         pnpm dev
 
-3. **Backend Setup:**
-    
+3.  **Backend Setup:**
+
         cd apps
         cd backend
         pnpm i
@@ -69,12 +76,19 @@ It is a web-based platform designed to empower farmers by providing seamless acc
 
 ## 🤝 Contributing
 
-When contributing to this project:
-- Create your feature branch from `dev`
-- Make your changes
-- **Push all pull requests to the `dev` branch**
-- Ensure your code follows the project's coding standards
-- Test your changes before submitting
+We ❤️ contributions! If you’d like to contribute to FARMLOC:
+
+1. **Fork** the repository
+2. **Clone** your fork locally
+3. **Create a new branch** from `dev`
+4. Make your changes and **test thoroughly**
+5. **Commit** with a clear message
+6. **Push** to your fork and open a Pull Request to `dev`
+
+📌 All pull requests should target the `dev` branch.  
+Please ensure your code follows our standards and includes proper documentation.
+
+⭐ Don’t forget to star our repo if you like this project! 🌱💚
 
 ## 📝 Development Workflow
 
@@ -101,10 +115,10 @@ When contributing to this project:
 
 ## 🚦 Getting Started
 
-1. Ensure you have Node.js and pnpm installed  
-2. Follow the installation steps above  
-3. Start both frontend and backend servers  
-4. Navigate to the frontend URL (typically `http://localhost:3000`)  
+1. Ensure you have Node.js and pnpm installed
+2. Follow the installation steps above
+3. Start both frontend and backend servers
+4. Navigate to the frontend URL (typically `http://localhost:3000`)
 5. Begin exploring FARMLOC features!
 
 ## 🙌 Our Contributors
@@ -119,7 +133,7 @@ We thank all the amazing contributors who help make **FARMLOC** better every day
 
 🎉 **This project is listed in [GirlScript Summer of Code 2025](https://gssoc.girlscript.tech)!**  
 <a href="https://gssoc.girlscript.tech/" target="_blank">
-  <img src="https://camo.githubusercontent.com/952866a3a2679243b5bb4b8e977a2e1eebe82074271ca4baa079da59be8efa76/68747470733a2f2f747365312e6d6d2e62696e672e6e65742f74682f69642f4f49502e68374f4241737068324262314b34573943366a694c51486143533f7069643d41706926503d3026683d313830"
+<img src="https://camo.githubusercontent.com/952866a3a2679243b5bb4b8e977a2e1eebe82074271ca4baa079da59be8efa76/68747470733a2f2f747365312e6d6d2e62696e672e6e65742f74682f69642f4f49502e68374f4241737068324262314b34573943366a694c51486143533f7069643d41706926503d3026683d313830"
     height="180" />
 </a>
 
@@ -131,16 +145,20 @@ We thank all the amazing contributors who help make **FARMLOC** better every day
 We welcome all contributors participating via GSSoC’25 & OSCI'25. Come, collaborate, and grow with us!
 </a>
 
-
 ## 📧 Support
 
 For any questions or issues, please create an issue in the repository or contact the development team.
+
+## 📜 License
+
+This project is licensed under the **MIT License** – you’re free to use, modify, and distribute it with attribution.
+
+See the [LICENSE](./License.md) file for details.
 
 ## Maintainer
 
 <table style="width:100%; border: 0;"> <tr> <td align="center" style="border: 0;"> <img src="https://avatars.githubusercontent.com/u/144250917?v=4" width="120" height="120" style="border-radius: 50%;" alt="Pujan Sarkar"/><br/> <strong>Pujan Sarkar</strong><br/><br/> <a href="https://github.com/Pujan-sarkar"> <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000" alt="GitHub" /> </a> <a href="https://www.linkedin.com/in/pujan-sarkar"> <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /> </a> </td> </tr> </table>
 </div>
 
-⭐ **Don’t forget to star our repo if you like this project!** 🌱💚  
-Your support helps us grow and reach more farmers. 
+Your support helps us grow and reach more farmers.
 **Happy Coding! 🌱**
