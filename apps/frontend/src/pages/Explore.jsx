@@ -1,7 +1,6 @@
 import React from "react";
 import Marketplace from "./Marketplace";
 import ColdStorage from "./ColdStorage";
-import "./Explore.css";
 
 const Explore = () => {
   return (
