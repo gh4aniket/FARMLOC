@@ -1226,3 +1226,29 @@ body.dark .social-icon {
     border-radius: 0 !important;
   }
 }
+.back-to-home-btn {
+  background: linear-gradient(135deg, #4cafef, #0077ff);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 15px;
+  position: absolute; /* keeps it floating */
+  top: 20px;
+  left: 20px;
+}
+
+.back-to-home-btn:hover {
+  background: linear-gradient(135deg, #0077ff, #0044cc);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-home-btn:active {
+  transform: scale(0.95);
+}
+
