@@ -7,6 +7,7 @@ import '../index.css';
 const Signup = () => {
   return (
     <div className="auth-container">
+      <Link to='/' className='back-to-home-btn'>Back to Home</Link>
       <div className="auth-left">
         <img
           src={signupImage}
