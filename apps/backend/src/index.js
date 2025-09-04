@@ -4,6 +4,7 @@ const compression = require('compression')
 const helmet = require('helmet')
 const mongoSanitize = require('express-mongo-sanitize')
 const xss = require('xss-clean')
+const cors = require('cors')
 const CheckError = require('./utils/checkError')
 const limiter = require('./utils/rateLimiter')
 const addLogger = require('./utils/addLogger')
@@ -15,6 +16,15 @@ require('./database/connectDB')
 
 app.use(express.json())
 app.use(compression())
+
+// CORS configuration
+app.use(cors({
+  origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+}))
+
 app.use(xss())
 app.use(mongoSanitize())
 app.use(helmet())

@@ -66,8 +66,6 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <Nav.Link
                 key={index}
-                as={Button}
-                variant="link"
                 onClick={() => handleNavClick(link.path, link.section)}
                 className="nav-link-custom mx-2 text-dark fw-semibold"
               >
