@@ -13,8 +13,9 @@ import Contact from "./pages/contact";
 import AnnouncementBar from "./components/AnnouncmentBar";
 import ColdStorage from "./pages/ColdStorage";
 import Marketplace from "./pages/Marketplace";
-import Explore from "./pages/Explore";
 
+import Explore from "./pages/Explore";
+import BackToTop from "./components/BackToTop";
 
 const sectionMap = {
   "/": "home",
@@ -48,6 +49,8 @@ const FullLandingPage = () => {
       <Faq />
       <Review />
       <Contact />
+      <BackToTop />
+
       {/* Add other components similarly */}
     </>
   );
