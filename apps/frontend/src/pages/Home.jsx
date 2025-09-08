@@ -4,6 +4,8 @@ import React from "react";
 import mainImage from "../assets/images/home1.png";
 import sideImage1 from "../assets/images/home2.png";
 import sideImage2 from "../assets/images/home3.png";
+import { Link } from "react-router-dom";
+
 
 const Home = () => {
   return (
@@ -16,7 +18,11 @@ const Home = () => {
             Shop fresh groceries and support local farming.
           </p>
 
-          <button className="explore-btn">Explore More</button>
+          <Link to = "/explore">
+            <button className="explore-btn">Explore More</button>
+          </Link>
+          
+          
 
           <div className="stats">
             <div>
