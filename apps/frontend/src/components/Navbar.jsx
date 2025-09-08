@@ -80,8 +80,6 @@ const Navbar = () => {
             {navLinks.map((link, index) => (
               <Nav.Link
                 key={index}
-                as={Button}
-                variant="link"
                 onClick={() => handleNavClick(link.path, link.section)}
                 className="mx-2 fw-semibold"
                 style={{ color: "#2c3e50", fontSize: "1rem" }}

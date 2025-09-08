@@ -9,6 +9,7 @@ import Faq from "./pages/faq";
 import Review from "./pages/Review";
 import Login from "./auth/Login";
 import Signup from "./auth/Signup";
+import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/contact";
 import AnnouncementBar from "./components/AnnouncmentBar";
 import ColdStorage from "./pages/ColdStorage";
@@ -58,7 +59,7 @@ const FullLandingPage = () => {
 
 const LayoutWrapper = ({ children }) => {
   const location = useLocation();
-  const hideLayoutPaths = ["/login", "/signup"];
+  const hideLayoutPaths = ["/login", "/signup", "/dashboard"];
   const shouldHideLayout = hideLayoutPaths.includes(location.pathname);
 
   return (
@@ -85,6 +86,7 @@ const App = () => {
           <Route path="/explore" element={<Explore />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </LayoutWrapper>
     </Router>
