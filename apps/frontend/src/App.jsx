@@ -13,6 +13,8 @@ import Contact from "./pages/contact";
 import AnnouncementBar from "./components/AnnouncmentBar";
 import ColdStorage from "./pages/ColdStorage";
 import Marketplace from "./pages/Marketplace";
+
+import Explore from "./pages/Explore";
 import BackToTop from "./components/BackToTop";
 
 const sectionMap = {
@@ -80,6 +82,7 @@ const App = () => {
           <Route path="/market" element={<FullLandingPage />} />
           <Route path="/review" element={<FullLandingPage />} />
           <Route path="/contact" element={<FullLandingPage />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
