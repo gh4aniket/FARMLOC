@@ -1,7 +1,28 @@
-# 🌾 FARMLOC
+# 🌾 FARMLOC  
+
+<div align="center">
+  
+[![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/firstcontributions/open-source-badges)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+[![Contributors Welcome](https://img.shields.io/badge/contributors-welcome-0b7cbd)](https://github.com/nikohoffren/fork-commit-merge/pulls)
+[![First Contributors](https://img.shields.io/badge/first-contributors-0b7cbd)](https://github.com/nikohoffren/fork-commit-merge/pulls)
+[![PR:s Welcome](https://img.shields.io/badge/PR:s-welcome-0b7cbd)](https://github.com/nikohoffren/fork-commit-merge/pulls)
+
+[![GSSOC'25](https://img.shields.io/badge/GSSOC-25-orange)](https://gssoc.girlscript.tech/)
+[![OSCI'25](https://img.shields.io/badge/OSCI-25-blue)](https://www.osconnect.org)
+
+[![Issues](https://img.shields.io/github/issues/Pujan-sarkar/FARMLOC.svg?style=flat)](https://github.com/Pujan-sarkar/FARMLOC/issues)
+[![Stars](https://img.shields.io/badge/stars-17-yellow)](https://github.com/Pujan-sarkar/FARMLOC/stargazers)
+[![Forks](https://img.shields.io/badge/forks-39-green)](https://github.com/Pujan-sarkar/FARMLOC/forks)
+
+[![MIT License](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md)
+
+</div>
 
 **FARMLOC** stands for **Farmers-Agricultural-Resource-Management-and-Location-Of-Cold-storage**.  
 It is a web-based platform designed to empower farmers by providing seamless access to agricultural resources, tools for management, and real-time information about the nearest available cold storages.
+
 
 ## 🔧 Tech Stack
 
